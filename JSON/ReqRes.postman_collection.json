@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "24586bde-047b-40e2-97be-d183eef964c0",
+		"name": "ReqRes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25447041"
+	},
+	"item": [
+		{
+			"name": "Get_Request",
+			"item": [
+				{
+					"name": "New Request-1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}{{api}}/:users?page=2",
+							"host": [
+								"{{url}}{{api}}"
+							],
+							"path": [
+								":users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							],
+							"variable": [
+								{
+									"key": "users",
+									"value": "users"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"console.log(\"Get_Request Folder Pre-Request Script Call\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Post_Request",
+			"item": [
+				{
+					"name": "Post Request-1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Response Fields\", () => {\r",
+									"    pm.expect(response.name, \"Name Field Test Failed\").to.eql(pm.variables.get(\"output_name\"));\r",
+									"    pm.expect(response.job, \"Job Field Test Failed\").to.eql(pm.variables.get(\"output_job\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{{request}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}{{api}}{{users}}",
+							"host": [
+								"{{url}}{{api}}{{users}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"console.log(\"Post_Request Folder Pre-Request Script Call\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"//DATA DRIVEN TESTING WITH DIFFERENT DATA SETS FOR EACH REQUEST",
+					"",
+					"//LOAD DATA FROM FILE",
+					"if(typeof pm.variables.get('requestsData') != 'object'){",
+					"    pm.variables.set('requestsData', pm.iterationData.toObject());",
+					"}",
+					"",
+					"const requestsData = pm.variables.get('requestsData');",
+					"",
+					"if(typeof requestsData !== 'object' || Object.keys(requestsData).length === 0){",
+					"    console.log('No external data provided OR object is empty');",
+					"    return;",
+					"}",
+					"",
+					"//FIND THE CURRENT REQUEST",
+					"const currentRequest = requestsData.requests.filter(({name}) => name === pm.info.requestName)[0];",
+					"",
+					"//SKIP THE REST SINCE WE HAVE NO DATA",
+					"if(!currentRequest){",
+					"    console.log('Request ${pm.info.requestName} has no data defined.');",
+					"    return;",
+					"}",
+					"",
+					"//EXPOSE VARIABLES",
+					"const variables = currentRequest.data.shift();",
+					"",
+					"for(const [key,value] of Object.entries(variables)){",
+					"    pm.variables.set(key, value);",
+					"}",
+					"",
+					"pm.variables.set('requestsData', requestsData);",
+					"",
+					"//DECIDE WHERE TO GO NEXT",
+					"if(currentRequest.data.length > 0){",
+					"    postman.setNextRequest(pm.info.requestName);",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://reqres.in",
+			"type": "string"
+		},
+		{
+			"key": "api",
+			"value": "/api",
+			"type": "string"
+		},
+		{
+			"key": "users",
+			"value": "/users",
+			"type": "string"
+		}
+	]
+}

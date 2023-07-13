@@ -1,0 +1,94 @@
+{
+	"id": "c0c86129-0448-49c3-b3c2-6b2a337947d3",
+	"name": "ReqRes",
+	"timestamp": "2023-01-23T06:36:06.404Z",
+	"collection_id": "25447041-24586bde-047b-40e2-97be-d183eef964c0",
+	"folder_id": 0,
+	"environment_id": "25447041-2c3466c0-38c2-4c49-acb2-fb681c591454",
+	"totalPass": 5,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "cee66942-1378-44f8-9b2f-8040e675b3ba",
+			"name": "New Request-1",
+			"url": "https://reqres.in/api/users?page=2",
+			"time": 95,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				95
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "43e2ed06-804a-4321-850d-d829a712807f",
+			"name": "Post Request-1",
+			"time": 423,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Validate Response Fields": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Validate Response Fields": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				455,
+				423
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Validate Response Fields": true
+				},
+				{
+					"Status code is 201": true,
+					"Validate Response Fields": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 973,
+	"collection": {
+		"requests": [
+			{
+				"id": "cee66942-1378-44f8-9b2f-8040e675b3ba",
+				"method": "GET"
+			},
+			{
+				"id": "43e2ed06-804a-4321-850d-d829a712807f",
+				"method": "POST"
+			},
+			{
+				"id": "43e2ed06-804a-4321-850d-d829a712807f",
+				"method": "POST"
+			}
+		]
+	}
+}

@@ -1,0 +1,21 @@
+[
+	{
+		"requests": [
+			{
+				"name": "Post Request-1",
+				"data": [
+					{
+						"request": "{\"name\": \"Raghib\",\"job\": \"Tester\"}",
+						"output_name": "Raghib",
+						"output_job": "Tester"
+					},
+					{
+						"request": "{\"name\": \"Usmani\",\"job\": \"Tester\"}",
+						"output_name": "Usmani",
+						"output_job": "Tester"
+					}
+				]
+			}
+		]
+	}
+]

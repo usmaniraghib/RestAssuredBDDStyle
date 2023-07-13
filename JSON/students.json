@@ -1,0 +1,110 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Raghib",
+      "location": "india",
+      "phone": "9538",
+      "Courses": [
+        "Java",
+        "Selenium"
+      ]
+    },
+    {
+      "courses": [
+        "Java",
+        "C"
+      ],
+      "phone": "12345",
+      "name": "Usmani",
+      "location": "Bihar",
+      "id": 2
+    },
+    {
+      "students": [
+        {
+          "phone": "5894",
+          "name": "Aizah",
+          "Courses": [
+            "MBBS",
+            "MS"
+          ],
+          "location": "US"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "students": [
+        {
+          "phone": "5894",
+          "name": "Aizah",
+          "Courses": [
+            "MBBS",
+            "MS"
+          ],
+          "location": "US"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "students": [
+        {
+          "phone": "5894",
+          "name": "Aizah",
+          "Courses": [
+            "MBBS",
+            "MS"
+          ],
+          "location": "US"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "students": [
+        {
+          "phone": "5894",
+          "name": "Aizah",
+          "Courses": [
+            "MBBS",
+            "MS"
+          ],
+          "location": "US"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "phone": "5894",
+      "name": "Aizah",
+      "Courses": [
+        "MBBS",
+        "MS"
+      ],
+      "location": "US",
+      "id": 7
+    },
+    {
+      "courses": [
+        "MBBS",
+        "MS"
+      ],
+      "phone": "5894",
+      "name": "Aizah",
+      "location": "US",
+      "id": 8
+    },
+    {
+      "courses": [
+        "MBBS",
+        "MS"
+      ],
+      "phone": "5894",
+      "name": "Aizah",
+      "location": "US",
+      "id": 9
+    }
+  ]
+}
