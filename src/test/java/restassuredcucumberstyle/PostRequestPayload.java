@@ -144,33 +144,24 @@ public class PostRequestPayload {
 			.log().all();		
 	}
 	
-	//@Test(priority=1)
-		//Using External JSON File
-		void testPostRequestUsingexternalJsonFileData() throws FileNotFoundException {
-			System.out.println("STARTED testPostRequestUsingexternalJsonFileData() METHOD");
-			
-			File fileObject = new File(".\\body.json");
-			FileReader fileReaderObject = new FileReader(fileObject);
-			JSONTokener jsonTokenerObject = new JSONTokener(fileReaderObject);
-			JSONObject jsonDataObject = new JSONObject(jsonTokenerObject);
-			
-			given()
-				.contentType("application/json")
-				.body(jsonDataObject.toString())
-			
-			.when()
-				.post("http://localhost:3000/students")
-			
-			.then()
-				.statusCode(201)
-				.body("name", equalTo("Aizah"))
-				.body("location", equalTo("US"))
-				.body("phone", equalTo("5894"))
-				.body("courses[0]", equalTo("MBBS"))
-				.body("courses[1]", equalTo("MS"))
-				.header("Content-Type", "application/json; charset=utf-8")
-				.log().all();		
-		}
+	// @Test(priority=1)
+	// Using External JSON File
+	void testPostRequestUsingexternalJsonFileData() throws FileNotFoundException {
+		System.out.println("STARTED testPostRequestUsingexternalJsonFileData() METHOD");
+
+		File fileObject = new File(".\\body.json");
+		FileReader fileReaderObject = new FileReader(fileObject);
+		JSONTokener jsonTokenerObject = new JSONTokener(fileReaderObject);
+		JSONObject jsonDataObject = new JSONObject(jsonTokenerObject);
+
+		given().contentType("application/json").body(jsonDataObject.toString())
+
+				.when().post("http://localhost:3000/students")
+
+				.then().statusCode(201).body("name", equalTo("Aizah")).body("location", equalTo("US"))
+				.body("phone", equalTo("5894")).body("courses[0]", equalTo("MBBS")).body("courses[1]", equalTo("MS"))
+				.header("Content-Type", "application/json; charset=utf-8").log().all();
+	}
 	
 	@Test(priority=1)
 	//Using External JSON File
