@@ -1,9 +1,0 @@
-restassuredcucumberstyle\ValidateJSONResponseBody.class
-restassuredcucumberstyle\HttpRequestClass.class
-restassuredcucumberstyle\ValidateXMLResponseBody.class
-restassuredcucumberstyle\HeaderClass.class
-restassuredcucumberstyle\CookieClass.class
-restassuredcucumberstyle\FileUploadDownload.class
-restassuredcucumberstyle\PathAndQueryParameters.class
-restassuredcucumberstyle\PostRequestPayload.class
-restassuredcucumberstyle\StudentPojo.class
