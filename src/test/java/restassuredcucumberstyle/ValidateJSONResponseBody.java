@@ -3,19 +3,11 @@ package restassuredcucumberstyle;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.google.gson.Gson;
-
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class ValidateJSONResponseBody {

@@ -7,7 +7,6 @@ import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 
 import java.util.List;
@@ -59,7 +58,6 @@ public class ValidateXMLResponseBody {
 		Assert.assertEquals(allTravelerinformation.size(), 10);
 		
 		List<String> travelerinformationName = xmlPathObject.getList("TravelerinformationResponse.travelers.Travelerinformation.name");
-		boolean status = false;
 		
 		for(String travelerName : travelerinformationName) {
 			System.out.println("Name : "+travelerName);

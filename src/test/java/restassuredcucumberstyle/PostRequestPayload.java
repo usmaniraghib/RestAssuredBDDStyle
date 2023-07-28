@@ -10,7 +10,6 @@ import org.json.JSONTokener;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 
 /*
@@ -34,7 +33,7 @@ then() -> VALIDATE STATUS CODE, EXTRACT RESPONSE, EXTRACT HEADERS COOKIES AND RE
 
 public class PostRequestPayload {
 	
-	HashMap hashMapObject = null;
+	HashMap<String, Object> hashMapObject = null;
 	
 	StudentPojo studentPojoObject = null;
 	
@@ -48,7 +47,7 @@ public class PostRequestPayload {
 	void testPostRequestUsingHashMapData() {
 		System.out.println("STARTED testPostRequestUsingHashMapData() METHOD");
 		
-		hashMapObject = new HashMap();
+		hashMapObject = new HashMap<String, Object>();
 		
 		hashMapObject.put("name", "Usmani");
 		hashMapObject.put("location", "Bihar");

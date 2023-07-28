@@ -3,7 +3,6 @@ package restassuredcucumberstyle;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 
 import java.util.HashMap;
@@ -57,7 +56,7 @@ public class HttpRequestClass {
 	//@Test
 	//@Test(priority=3)
 	void performPostRequest() {
-		Map data = new HashMap();
+		Map<String, String> data = new HashMap<String, String>();
 		data.put("name", "Raghib");
 		data.put("job", "Tester");
 		
@@ -76,7 +75,7 @@ public class HttpRequestClass {
 	//@Test
 		@Test(priority=4)
 		void performPostRequest1() {
-			Map data = new HashMap();
+			Map<String, String> data = new HashMap<String, String>();
 			data.put("name", "Raghib");
 			data.put("job", "Tester");
 			
@@ -94,7 +93,7 @@ public class HttpRequestClass {
 	//@Test
 	@Test(priority=5, dependsOnMethods= {"performPostRequest1"})
 	void performPutRequest() {
-		Map data = new HashMap();
+		Map<String, String> data = new HashMap<String, String>();
 		data.put("name", "Raghib");
 		data.put("job", "Automation-Tester");
 		
