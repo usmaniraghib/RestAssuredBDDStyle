@@ -30,6 +30,11 @@ then() -> VALIDATE STATUS CODE, EXTRACT RESPONSE, EXTRACT HEADERS COOKIES AND RE
 4) Using External JSON File
  */
 
+/* REFERENCE :-
+C:\STUDY_DATA\TESTING\New folder_2\2-C_REST Assured\RestAssured - Latest
+Session 2_ API Testing _ RestAssured _ Creating Post Request Payloads in Multipl.mp4
+ */
+
 public class PostRequestPayload {
 	
 	HashMap<String, Object> hashMapObject = null;
