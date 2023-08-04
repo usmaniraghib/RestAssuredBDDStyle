@@ -105,6 +105,46 @@
       "name": "Aizah",
       "location": "US",
       "id": 9
+    },
+    {
+      "courses": [
+        "Java",
+        "C"
+      ],
+      "phone": "12345",
+      "name": "Usmani",
+      "location": "Bihar",
+      "id": 10
+    },
+    {
+      "courses": [
+        "Java",
+        "C"
+      ],
+      "phone": "12345",
+      "name": "Usmani",
+      "location": "Bihar",
+      "id": 11
+    },
+    {
+      "name": "Usmani",
+      "location": "Bihar",
+      "phone": "12345",
+      "courses": [
+        "Java",
+        "C"
+      ],
+      "id": 12
+    },
+    {
+      "courses": [
+        "MBBS",
+        "MS"
+      ],
+      "phone": "5894",
+      "name": "Aizah",
+      "location": "US",
+      "id": 13
     }
   ]
 }

@@ -24,8 +24,8 @@ public class FileUploadDownload {
 			.log().all();
 	}
 
-	// @Test(priority=2)
-	void multipleFileUpload() {	//THIS IS INCOMPLETE
+	@Test(priority=2)
+	void multipleFileUpload() {	//TODO - THIS IS INCOMPLETE
 		File fileObject1 = new File(uploadFilePath+"\\Picture\\"+"2Inspect-Element.JPG");
 		System.out.println("fileObject1 : " + fileObject1);
 		File fileObject2 = new File(uploadFilePath+"\\Picture\\"+"3Script-file-with-au3-extension.JPG");
@@ -42,7 +42,7 @@ public class FileUploadDownload {
 	}
 
 	// @Test(priority=2)
-	void fileDownload() {	//THIS IS INCOMPLETE
+	void fileDownload() {	//TODO - THIS IS INCOMPLETE
 		given()
 		.when()
 			.get("https://the-internet.herokuapp.com/upload")

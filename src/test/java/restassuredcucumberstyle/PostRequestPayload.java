@@ -7,7 +7,6 @@ import java.util.HashMap;
 
 import org.json.JSONObject;
 import org.json.JSONTokener;
-import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
@@ -143,8 +142,8 @@ public class PostRequestPayload {
 			.log().all();		
 	}
 	
-	// @Test(priority=1)
-	// Using External JSON File
+	//@Test(priority=1)
+	//Using External JSON File
 	void testPostRequestUsingexternalJsonFileData() throws FileNotFoundException {
 		System.out.println("STARTED testPostRequestUsingexternalJsonFileData() METHOD");
 
@@ -162,7 +161,7 @@ public class PostRequestPayload {
 				.header("Content-Type", "application/json; charset=utf-8").log().all();
 	}
 	
-	@Test(priority=1)
+	//@Test(priority=1)
 	//Using External JSON File
 	void testPostRequestUsingexternalJsonFileData1() {
 		System.out.println("STARTED testPostRequestUsingexternalJsonFileData1() METHOD");

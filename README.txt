@@ -7,6 +7,7 @@ Java-9
 Eclipse
 Maven
 Testng
+NodeJS, npm, and json-server -> On your machine (PC, Laptop).
 
 
 POM Dependency :-
