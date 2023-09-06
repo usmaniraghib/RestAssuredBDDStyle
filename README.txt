@@ -11,11 +11,11 @@ NodeJS, npm, and json-server -> On your machine (PC, Laptop).
 
 
 POM Dependency :-
+testng
 rest-assured
 json-path
 json
 gson
-testng
 scribejava-apis
 json-schema-validator
 xml-schema-validator
